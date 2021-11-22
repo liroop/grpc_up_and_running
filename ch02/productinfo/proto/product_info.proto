@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package ecommerce;
+package proto;
+option go_package = "github.com/liroop/grpc_up_and_running/ch02/productinfo/proto";
 
 service ProductInfo {
     rpc addProduct(Product) returns (ProductID);
@@ -17,3 +18,5 @@ message Product {
 message ProductID {
     string value = 1;
 }
+
+
